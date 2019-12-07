@@ -16,3 +16,6 @@ backend/__tests__/coverage
 .DS_Store
 .AppleDouble
 .LSOverride
+
+# production
+/build
