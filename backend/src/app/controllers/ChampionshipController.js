@@ -1,3 +1,5 @@
+import MovieService from '../services/MovieService';
+
 class ChampionshipController {
   start(req, res) {
     const { movies } = req.body;
@@ -8,7 +10,10 @@ class ChampionshipController {
         .json({ message: 'Provide 8 movies to start championship' });
     }
 
-    return res.json({});
+    const movieService = new MovieService();
+    const championshipResult = movieService.startChampionship(movies);
+
+    return res.json(championshipResult);
   }
 }
 
