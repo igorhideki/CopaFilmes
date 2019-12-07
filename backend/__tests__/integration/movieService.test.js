@@ -38,8 +38,14 @@ describe('ChampionshipService', () => {
     expect(result).toEqual(movieA);
   });
 
-  it('should return a object with winner and vice winner', () => {
+  it('should return a object with winner and vice winner, when provide championship structure', () => {
     const result = movieService.getChampionshipResult(championshipStructure);
+
+    expect(result).toEqual(winners);
+  });
+
+  it('should return a object with winner and vice winner, when provide array of movies', () => {
+    const result = movieService.startChampionship(movies);
 
     expect(result).toEqual(winners);
   });

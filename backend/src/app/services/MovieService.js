@@ -32,15 +32,15 @@ export default class MovieService {
     return movieA.nota > movieB.nota ? movieA : movieB;
   }
 
-  getChampionshipResult(structure) {
-    const { length } = structure;
+  getChampionshipResult(championshipStructure) {
+    const { length } = championshipStructure;
 
     if (length > 2) {
       const currentStructure = [];
 
       for (let i = 0; i < length - 1; i += 2) {
-        const movieA = structure[i];
-        const movieB = structure[i + 1];
+        const movieA = championshipStructure[i];
+        const movieB = championshipStructure[i + 1];
         currentStructure.push(this.compareTwoMovies(movieA, movieB));
       }
 
@@ -48,8 +48,18 @@ export default class MovieService {
     }
 
     return {
-      winner: structure[0],
-      viceWinner: structure[1],
+      winner: championshipStructure[0],
+      viceWinner: championshipStructure[1],
     };
+  }
+
+  startChampionship(movies) {
+    const moviesSorted = this.sortMovieList(movies);
+    const championshipStructure = this.createChampionshipStructure(
+      moviesSorted
+    );
+    const winners = this.getChampionshipResult(championshipStructure);
+
+    return winners;
   }
 }
