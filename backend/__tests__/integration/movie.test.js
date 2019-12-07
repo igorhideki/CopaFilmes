@@ -1,7 +1,7 @@
 import request from 'supertest';
 import app from '../../src/app';
 
-describe('Movies', () => {
+describe('MovieController', () => {
   it('should return an array', async () => {
     const response = await request(app).get('/movies');
 
