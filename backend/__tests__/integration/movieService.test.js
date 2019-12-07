@@ -1,15 +1,14 @@
 import MovieService from '../../src/app/services/MovieService';
 
 import movies from '../mocks/movies';
-import movieNamesSorted from '../mocks/movieNamesSorted';
+import moviesSorted from '../mocks/moviesSorted';
 
 describe('ChampionshipService', () => {
   const movieService = new MovieService();
 
   it('should return movies sorted', async () => {
-    const moviesSorted = movieService.sortMovieList(movies);
-    const result = moviesSorted.map(movie => movie.titulo);
+    const result = movieService.sortMovieList(movies);
 
-    expect(result).toEqual(movieNamesSorted);
+    expect(result).toEqual(moviesSorted);
   });
 });
