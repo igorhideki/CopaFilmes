@@ -1,7 +1,7 @@
-const express = require("express");
+import { Router } from "express";
 
-const routes = express.Router();
+const routes = Router();
 
 routes.get("/", (req, res) => res.json({ messege: "Copa filmes" }));
 
-module.exports = routes;
+export default routes;
