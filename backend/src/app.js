@@ -1,4 +1,4 @@
-import express from 'express';
+import express, { json } from 'express';
 
 import routes from './routes';
 
@@ -9,7 +9,9 @@ class App {
     this.routes();
   }
 
-  middlewares() {}
+  middlewares() {
+    this.server.use(json());
+  }
 
   routes() {
     this.server.use(routes);
