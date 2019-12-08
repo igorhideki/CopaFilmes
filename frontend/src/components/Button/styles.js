@@ -4,7 +4,7 @@ import { darken } from 'polished';
 import { colors } from '../../styles/variables';
 
 export const Container = styled.button`
-  background: ${colors.accent};
+  background: ${colors.primary};
   color: #fff;
   font-size: 16px;
   font-weight: bold;
@@ -18,7 +18,7 @@ export const Container = styled.button`
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 
   &:hover {
-    background: ${darken(0.1, colors.accent)};
+    background: ${darken(0.05, colors.primary)};
   }
 
   > svg {
