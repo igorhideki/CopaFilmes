@@ -3,10 +3,10 @@ import PropTypes from 'prop-types';
 
 import { Container, Title, PreTitle, Description } from './styles';
 
-export default function Header({ title, preTitle, description }) {
+export default function Header({ title, description }) {
   return (
     <Container>
-      <PreTitle>{preTitle}</PreTitle>
+      <PreTitle>Campeonato de filmes</PreTitle>
       <Title>{title}</Title>
       <Description>{description}</Description>
     </Container>
@@ -15,6 +15,5 @@ export default function Header({ title, preTitle, description }) {
 
 Header.propTypes = {
   title: PropTypes.string.isRequired,
-  preTitle: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
 };

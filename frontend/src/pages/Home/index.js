@@ -39,7 +39,6 @@ export default function Home() {
     <Container>
       <Header
         title="Fase de Seleção"
-        preTitle="Campeonato de filmes"
         description="Selecione 8 filmes que você deseja que entrem na competição e depois pressione o botão Gerar meu Campeonato para prosseguir"
       />
       <Wrapper>
