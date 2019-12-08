@@ -11,9 +11,16 @@ export const Container = styled.div`
   align-items: center;
   height: 100%;
   min-height: 80px;
+  transition: all 0.2s ease-out;
+  cursor: pointer;
 
   > div + div {
     margin-left: 8px;
+  }
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
   }
 `;
 

@@ -1,22 +1,29 @@
-import React, { useState } from 'react';
+import React, { useMemo } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import PropTypes from 'prop-types';
 import { MdCheckBox, MdCheckBoxOutlineBlank } from 'react-icons/md';
 
+import { addMovie } from '~/store/modules/championship/actions';
 import { Container, MovieName, MovieYear } from './styles';
 import { colors } from '~/styles/variables';
 
 export default function MovieItem({ data }) {
-  const [check, setCheck] = useState(false);
+  const { moviesSelected } = useSelector(state => state.championship);
+  const checked = useMemo(
+    () => !!moviesSelected.find(movie => movie.id === data.id),
+    [data.id, moviesSelected]
+  );
+  const dispacth = useDispatch();
 
-  function handleCheck(e) {
-    setCheck(e.target.checked);
+  function handleCheck() {
+    dispacth(addMovie(data));
   }
 
   return (
     <label htmlFor={data.id} data-testid="movieItemLabel">
       <Container>
         <div>
-          {check ? (
+          {checked ? (
             <MdCheckBox size={24} color={colors.secondary} />
           ) : (
             <MdCheckBoxOutlineBlank size={24} color={colors.secondary} />
@@ -33,6 +40,7 @@ export default function MovieItem({ data }) {
           id={data.id}
           data-testid="movieItemInput"
           onChange={handleCheck}
+          checked={checked}
           hidden
         />
       </Container>
