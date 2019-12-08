@@ -1,3 +1,5 @@
+import { toast } from 'react-toastify';
+
 const INITIAL_STATE = {
   moviesSelected: [],
   winners: {},
@@ -20,6 +22,9 @@ export default function championship(state = INITIAL_STATE, action) {
       }
 
       if (state.moviesSelected.length === 8) {
+        toast.warning(
+          'Apenas 8 filmes são permitidos para gerar um campeonato!'
+        );
         return state;
       }
 
