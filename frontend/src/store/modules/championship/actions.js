@@ -18,3 +18,9 @@ export function startChampionshipSuccess(winners) {
     payload: { winners },
   };
 }
+
+export function resetChampionship() {
+  return {
+    type: '@championship/RESET',
+  };
+}

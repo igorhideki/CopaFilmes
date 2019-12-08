@@ -28,8 +28,12 @@ export default function championship(state = INITIAL_STATE, action) {
         moviesSelected: [...state.moviesSelected, action.payload.movie],
       };
     }
-    case '@championship/START_SUCCESS':
+    case '@championship/START_SUCCESS': {
       return { ...state, winners: action.payload.winners };
+    }
+    case '@championship/RESET': {
+      return INITIAL_STATE;
+    }
     default:
       return state;
   }
