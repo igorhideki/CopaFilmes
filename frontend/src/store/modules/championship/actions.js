@@ -1,6 +1,6 @@
 export function addMovie(movie) {
   return {
-    type: '@mchampionship/ADD_MOVIE',
+    type: '@championship/ADD_MOVIE',
     payload: { movie },
   };
 }

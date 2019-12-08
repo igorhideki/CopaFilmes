@@ -13,13 +13,20 @@ export default function championship(state = INITIAL_STATE, action) {
       if (hasMovieSelected) {
         return {
           ...state,
-          movies: [
-            state.movies.filter(movie => action.payload.movie.id !== movie.id),
-          ],
+          moviesSelected: state.moviesSelected.filter(
+            movie => action.payload.movie.id !== movie.id
+          ),
         };
       }
 
-      return { ...state, movies: [...state.movies, action.payload.movie] };
+      if (state.moviesSelected.length === 8) {
+        return state;
+      }
+
+      return {
+        ...state,
+        moviesSelected: [...state.moviesSelected, action.payload.movie],
+      };
     default:
       return state;
   }
