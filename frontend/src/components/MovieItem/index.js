@@ -24,12 +24,12 @@ export default function MovieItem({ data }) {
         </div>
 
         <div>
-          <MovieName>{data.nome}</MovieName>
+          <MovieName>{data.titulo}</MovieName>
           <MovieYear>{data.ano}</MovieYear>
         </div>
         <input
           type="checkbox"
-          name={data.nome}
+          name={data.titulo}
           id={data.id}
           data-testid="movieItemInput"
           onChange={handleCheck}
@@ -43,7 +43,7 @@ export default function MovieItem({ data }) {
 MovieItem.propTypes = {
   data: PropTypes.shape({
     id: PropTypes.string.isRequired,
-    nome: PropTypes.string.isRequired,
-    ano: PropTypes.string.isRequired,
+    titulo: PropTypes.string.isRequired,
+    ano: PropTypes.number.isRequired,
   }).isRequired,
 };

@@ -6,8 +6,8 @@ import MovieItem from '~/components/MovieItem';
 describe('Button component', () => {
   it('should call onClick prop when button was clicked', () => {
     const data = {
-      nome: 'Movie test',
-      ano: 'Ano test',
+      titulo: 'Movie test',
+      ano: 2000,
       id: 'teste id',
     };
 
