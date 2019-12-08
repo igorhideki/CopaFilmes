@@ -4,3 +4,17 @@ export function addMovie(movie) {
     payload: { movie },
   };
 }
+
+export function startChampionshipRequest(moviesSelected) {
+  return {
+    type: '@championship/START_REQUEST',
+    payload: { moviesSelected },
+  };
+}
+
+export function startChampionshipSuccess(winners) {
+  return {
+    type: '@championship/START_SUCCESS',
+    payload: { winners },
+  };
+}
