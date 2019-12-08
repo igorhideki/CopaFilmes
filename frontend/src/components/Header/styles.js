@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { gradient, colors } from '~/styles/variables';
+import { gradient, colors, breakingPoints } from '~/styles/variables';
 
 export const Container = styled.div`
   background: ${gradient.main};
@@ -25,6 +25,10 @@ export const Title = styled.h1`
     position: absolute;
     top: 100%;
     left: calc(50% - 10px);
+  }
+
+  @media (max-width: ${breakingPoints.xs}) {
+    font-size: 24px;
   }
 `;
 
