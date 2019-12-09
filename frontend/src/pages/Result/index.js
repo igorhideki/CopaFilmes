@@ -38,12 +38,16 @@ export default function Result() {
       {winner ? (
         <Content>
           <ResultItem>
-            <ResultPosition>1º</ResultPosition>
+            <ResultPosition>
+              <span>1º</span>
+            </ResultPosition>
             <ResultTitle>{winner.titulo}</ResultTitle>
             <IconWinner />
           </ResultItem>
           <ResultItem>
-            <ResultPosition>2º</ResultPosition>
+            <ResultPosition>
+              <span>2º</span>
+            </ResultPosition>
             <ResultTitle>{viceWinner.titulo}</ResultTitle>
             <IconViceWinner />
           </ResultItem>

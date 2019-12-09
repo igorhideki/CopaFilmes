@@ -52,10 +52,13 @@ export const ResultItem = styled.div`
 
 export const ResultPosition = styled.div`
   background: ${colors.secondary};
-  padding: 24px;
+  padding: 0 24px;
   color: #fff;
   font-size: 18px;
   font-weight: bold;
+  align-self: stretch;
+  display: flex;
+  align-items: center;
 `;
 
 export const ResultTitle = styled.div`
