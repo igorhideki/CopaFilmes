@@ -1,12 +1,12 @@
 # Copa Filmes
 
-Aplicação desenvolvida para organizar a Copa do Mundo de filmes.
+Aplicação desenvolvida para organizar a Copa do Mundo de filmes. :trophy::movie_camera:
 
-Esta aplicação está divida em duas parte, **backend** e **frontend**
+Esta aplicação está divida em duas parte, **backend** e **frontend**.
 
 ## Backend
 
-O Backend foi desenvolvido utilizando [Node.js](https://nodejs.org) e [Express](https://expressjs.com) para servir a aplicação frontend.
+O **backend** foi desenvolvido utilizando [Node.js](https://nodejs.org) e [Express](https://expressjs.com) para servir a aplicação frontend.
 
 ### Instalação
 
@@ -22,7 +22,7 @@ Para executar a aplicação localmente é necessário ter instalado na máquina 
 
 ## Frontend
 
-O Frontend foi desenvolvido utilizando [ReactJS](https://reactjs.org).
+O **frontend** foi desenvolvido utilizando [ReactJS](https://reactjs.org).
 
 Outras tecnologias utilizadas neste projeto:
 
@@ -31,7 +31,7 @@ Outras tecnologias utilizadas neste projeto:
 - Reactotron
 - Styled-components
 
-## Instalação
+### Instalação
 
 Para executar a aplicação localmente é necessário ter instalado na máquina o **Node.js** (os exemplos abaixo serão utilizando **Yarn** mas ele é opcional).
 
