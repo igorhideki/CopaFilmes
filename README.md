@@ -1,6 +1,8 @@
 # Copa Filmes
 
-Aplicação para organizar a Copa do Mundo de filmes.
+Aplicação desenvolvida para organizar a Copa do Mundo de filmes.
+
+Esta aplicação está divida em duas parte, **backend** e **frontend**
 
 ## Backend
 
