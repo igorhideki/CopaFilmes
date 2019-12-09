@@ -2,7 +2,7 @@
 
 Aplicação desenvolvida para organizar a Copa do Mundo de filmes. :trophy::movie_camera:
 
-Esta aplicação está divida em duas parte, **backend** e **frontend**.
+Esta aplicação está dividida em duas parte, **backend** e **frontend**.
 
 ## Backend
 
